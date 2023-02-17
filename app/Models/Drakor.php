@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class KDrama extends Model
+class Drakor extends Model
 {
-    use HasFactory, Sluggable;
+    use HasFactory;
+    use Sluggable;
 
     protected $guarded = ['id'];
 
@@ -16,6 +17,11 @@ class KDrama extends Model
         'genres' => 'array',
         'release' => 'date',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function sluggable(): array
     {
