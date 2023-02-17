@@ -10,6 +10,8 @@ class KDrama extends Model
 {
     use HasFactory, Sluggable;
 
+    protected $guarded = ['id'];
+
     protected $casts = [
         'genres' => 'array',
         'release' => 'date',

@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('k_dramas', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 20);
-            $table->string('slug');
+            $table->string('title', 50);
+            $table->string('slug')->unique();
             $table->string('year', 4);
             $table->string('type');
-            $table->string('episodes');
+            $table->integer('episodes');
             $table->json('genres');
             $table->date('release');
             $table->timestamps();
