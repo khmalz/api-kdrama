@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Drakor;
+use App\Models\KDrama;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => 'Crash Landing on You',
             'year' => '2019',
             'type' => 'series',
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'release' => '2019-12-14'
         ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => 'True Beauty',
             'year' => '2020',
             'type' => 'series',
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'release' => '2020-12-09'
         ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => "It's Okay to Not Be Okay",
             'year' => '2020',
             'type' => 'series',
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
             'release' => '2020-06-20'
         ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => "Start-Up",
             'year' => '2020',
             'type' => 'series',
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'release' => '2020-10-17'
         ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => "Alchemy of Souls",
             'year' => '2022',
             'type' => 'series',
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'release' => '2022-06-18'
         ]);
 
-        Drakor::create([
+        KDrama::create([
             'title' => "Alchemy of Souls: Light and Shadow",
             'year' => '2022',
             'type' => 'series',

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DrakorController;
+use App\Http\Controllers\KDramaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,4 @@ use App\Http\Controllers\DrakorController;
 //     return $request->user();
 // });
 
-Route::resource('drakor', DrakorController::class);
+Route::resource('k-drama', KDramaController::class);

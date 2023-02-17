@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Drakor;
+use App\Models\KDrama;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class DrakorController extends Controller
+class KDramaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(): Response
     {
-        $drakors = Drakor::get();
+        $drakors = KDrama::get();
         return response($drakors);
     }
 
@@ -28,15 +28,15 @@ class DrakorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Drakor $drakor): Response
+    public function show(KDrama $kDrama): Response
     {
-        return response($drakor);
+        return response($kDrama);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Drakor $drakor): Response
+    public function update(Request $request, KDrama $kDrama): Response
     {
         //
     }
@@ -44,7 +44,7 @@ class DrakorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Drakor $drakor): Response
+    public function destroy(KDrama $kDrama): Response
     {
         //
     }
