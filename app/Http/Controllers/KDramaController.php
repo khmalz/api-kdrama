@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\KDramaCollection;
 use App\Http\Resources\KDramaResource;
 use App\Models\KDrama;
 use Illuminate\Http\Request;
@@ -12,10 +13,9 @@ class KDramaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index(): KDramaCollection
     {
-        $drakors = KDrama::get();
-        return response($drakors);
+        return new KDramaCollection(KDrama::get());
     }
 
     /**

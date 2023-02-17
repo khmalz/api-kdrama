@@ -26,7 +26,7 @@ class KDramaResource extends JsonResource
         ];
     }
 
-    public function with($requests): array
+    public function with(Request $requests): array
     {
         return ['status' => 'success'];
     }
