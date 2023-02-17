@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 20);
             $table->string('slug');
-            $table->string('year');
+            $table->string('year', 4);
             $table->string('type');
             $table->string('episodes');
             $table->json('genres');
