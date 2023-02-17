@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\KDramaResource;
 use App\Models\KDrama;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,9 +29,9 @@ class KDramaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(KDrama $kDrama): Response
+    public function show(KDrama $kDrama): KDramaResource
     {
-        return response($kDrama);
+        return new KDramaResource($kDrama);
     }
 
     /**
