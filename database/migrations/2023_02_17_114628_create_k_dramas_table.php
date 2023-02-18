@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('type');
             $table->integer('episodes');
             $table->json('genres');
-            $table->date('release');
+            $table->date('released');
             $table->timestamps();
         });
     }

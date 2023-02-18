@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 16,
             'genres' => ['Comedy', 'Romance'],
-            'release' => '2019-12-14'
+            'released' => '2019-12-14'
         ]);
 
         KDrama::create([
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 16,
             'genres' => ['Romance', 'Comedy', 'Slice of life', 'Coming-of-age'],
-            'release' => '2020-12-09'
+            'released' => '2020-12-09'
         ]);
 
         KDrama::create([
@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 16,
             'genres' => ['Comedy', 'Romance'],
-            'release' => '2020-06-20'
+            'released' => '2020-06-20'
         ]);
 
         KDrama::create([
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 16,
             'genres' => ['Romance', 'Comedy', 'Slice of life'],
-            'release' => '2020-10-17'
+            'released' => '2020-10-17'
         ]);
 
         KDrama::create([
@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 20,
             'genres' => ['Fantasy', 'Romance', 'Sageuk', 'Action'],
-            'release' => '2022-06-18'
+            'released' => '2022-06-18'
         ]);
 
         KDrama::create([
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'series',
             'episodes' => 10,
             'genres' => ['Fantasy', 'Romance', 'Sageuk', 'Action'],
-            'release' => '2022-12-10'
+            'released' => '2022-12-10'
         ]);
     }
 }

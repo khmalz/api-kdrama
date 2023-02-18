@@ -15,7 +15,7 @@ class KDrama extends Model
 
     protected $casts = [
         'genres' => 'array',
-        'release' => 'date',
+        'released' => 'date',
     ];
 
     public function getRouteKeyName()

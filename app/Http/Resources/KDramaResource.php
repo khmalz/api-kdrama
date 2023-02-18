@@ -22,7 +22,7 @@ class KDramaResource extends JsonResource
             'type' => $this->type,
             'episodes' => $this->episodes,
             'genres' => $this->genres,
-            'release' => $this->release->format('d F Y')
+            'released' => $this->released->format('d F Y')
         ];
     }
 

@@ -27,7 +27,7 @@ class KDramaRequest extends FormRequest
             'type' => ['required', 'string', 'alpha'],
             'episodes' => ['required', 'integer'],
             'genres' => ['required', 'array', 'min:1'],
-            'release' => ['required', 'date']
+            'released' => ['required', 'date']
         ];
     }
 }
