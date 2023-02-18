@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,8 +12,8 @@ return new class extends Migration
     {
         Schema::create('k_dramas', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 50);
-            $table->string('slug')->unique();
+            $table->string('title', 50)->unique();
+            $table->string('slug');
             $table->string('year', 4);
             $table->string('type');
             $table->integer('episodes');

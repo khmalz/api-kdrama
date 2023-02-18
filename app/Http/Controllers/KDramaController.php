@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\KDramaRequest;
 use App\Http\Resources\KDramaCollection;
 use App\Http\Resources\KDramaResource;
 use App\Models\KDrama;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -21,9 +23,13 @@ class KDramaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): Response
+    public function store(KDramaRequest $request): JsonResponse
     {
-        //
+        KDrama::create($request->validated());
+
+        return response()->json([
+            'message' => 'success added a kdrama'
+        ], 201);
     }
 
     /**
@@ -37,9 +43,13 @@ class KDramaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, KDrama $kDrama): Response
+    public function update(KDramaRequest $request, KDrama $kDrama)
     {
-        //
+        $kDrama->update($request->validated());
+
+        return response()->json([
+            'message' => 'success edited a kdrama'
+        ], 200);
     }
 
     /**
