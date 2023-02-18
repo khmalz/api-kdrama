@@ -43,20 +43,24 @@ class KDramaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(KDramaRequest $request, KDrama $kDrama)
+    public function update(KDramaRequest $request, KDrama $kDrama): JsonResponse
     {
         $kDrama->update($request->validated());
 
         return response()->json([
-            'message' => 'success edited a kdrama'
+            'message' => 'success edited the kdrama'
         ], 200);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(KDrama $kDrama): Response
+    public function destroy(KDrama $kDrama): JsonResponse
     {
-        //
+        $kDrama->delete();
+
+        return response()->json([
+            'message' => 'success deleted the kdrama'
+        ], 200);
     }
 }
