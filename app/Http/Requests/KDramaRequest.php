@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class KDramaRequest extends FormRequest
@@ -22,7 +23,7 @@ class KDramaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'max:50'],
+            'title' => ['required', 'max:50', Rule::unique('k_dramas', 'title')->ignore($this->k_drama)],
             'year' => ['required', 'numeric', 'max_digits:4', 'date_format:Y'],
             'type' => ['required', 'string', 'alpha'],
             'episodes' => ['required', 'integer'],
